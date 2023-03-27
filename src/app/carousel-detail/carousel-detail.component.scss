@@ -1,18 +1,36 @@
+@import '../../assets/scss/base/variables';
+
+
 section{
     background: rgb(0, 0, 0);
  display: flex;
 overflow: hidden;
     .fluid-container{
 display: flex;
+width: 100%;
 padding: 5rem 10rem;
 position: relative;
 transition: all 0.5s ease-in;
+@media only #{$desktop-max}{
+    width: 100%;
+    padding: 5rem 4rem;
+}
+
+@media only #{$desktop-pro-max}{
+    width: 100%;
+    padding: 5rem 4rem;
+}
+
+@media only #{$mobile-xsMax}{
+    width: 100%;
+    padding: 5rem 1rem;
+}
 
 .carousel-img{
     background-position: center;
     background-size: cover;
     background: url(../../assets/carousel.png) no-repeat;
-    width: 130rem;
+    width: 100%;
     height: 70rem;
     position: relative;
     background-blend-mode: color;
@@ -23,6 +41,17 @@ transition: all 0.5s ease-in;
  align-items: center;
  padding-bottom: 10rem;
  gap: 2rem;
+ @media only #{$mobile-xsMax}{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+@media only #{$desktop-pro-max}{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
     .h4{
      color:  #FFC178 ;  
 font-size: 1.3rem;
@@ -80,7 +109,7 @@ font-size: 1.5rem;
         position: absolute;
         color: white;
      left: 5rem;
-     bottom:34rem;
+     bottom:32.5rem;
         font-size: 3.5rem;
             }
     .scroll-2{

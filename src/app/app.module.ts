@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TravelDetailsComponent } from './travel-details/travel-details.component';
 import { CarouselDetailComponent } from './carousel-detail/carousel-detail.component';
+import { TravelCultureComponent } from './travel-culture/travel-culture.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { CarouselDetailComponent } from './carousel-detail/carousel-detail.compo
     AppComponent,
     HomeComponent,
     TravelDetailsComponent,
-    CarouselDetailComponent
+    CarouselDetailComponent,
+    TravelCultureComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

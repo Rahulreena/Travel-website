@@ -1,4 +1,8 @@
+@import '../../assets/scss/base/variables';
+
+
 .Main-head{
+    overflow: hidden;
     height: 100vh;
     background: url(../../assets/hom.png);
     background-position: center;
@@ -13,6 +17,9 @@ position: relative;
         justify-content: space-between;
         padding: 3rem 3.5rem;
         align-items: center;
+        @media only #{$mobile-xsMax}{
+           gap: 20rem;
+          }
         .nav-h2{
 color: white;
 font-size: 2rem;
@@ -21,6 +28,9 @@ font-size: 2rem;
         ul{
             display: flex;
             list-style: none;
+            @media only #{$mobile-xsMax}{
+              display: none;
+            }
             li{
                 a{
                     color: white;
@@ -37,7 +47,7 @@ font-size: 2rem;
             img{
 filter: brightness(90%);
                 position: absolute;
-              
+              left: 5rem;
             }
             .nav-input{
 background: transparent;
@@ -47,6 +57,7 @@ outline: none;
             }
             ::placeholder{
                 color: rgba(255, 255, 255, 0.586);
+                text-align: center;
             }
         }
     }
@@ -58,12 +69,27 @@ display: flex;
 gap: 40rem;
 align-items: center;
 height: 70vh;
+
+@media only #{$desktop-pro-max}{
+    gap: 20rem;
+}
+
+@media only #{$desktop-max}{
+    gap: 15rem;
+}
+
+@media only #{$mobile-xsMax}{
+gap: 3rem;
+   }
         .content-1{
 display: flex;
 flex-direction: column;
 align-items: center;
 gap: 1rem;
-color: white;
+color: rgba(255, 255, 255, 0.675);
+@media only #{$desktop-max}{
+gap: 0.7rem;
+       }
 .text-1{
 
 
@@ -71,11 +97,19 @@ color: white;
 writing-mode: vertical-rl;
 font-size: 1.3rem;
 font-weight: 400;
+@media only #{$desktop-max}{
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+       }
     }
 }
     
 i{
     font-size: 1.4rem;
+    @media only #{$desktop-max}{
+        font-size: 1rem;
+   
+           }
 }
 
 
@@ -84,12 +118,23 @@ i{
         .content-2{
 display: flex;
 flex-direction: column;
+@media only #{$mobile-xsMax}{
+   text-align: center;
+   }
             .content-2-h4{
 color: #FFC178;
 letter-spacing: 0.6rem;
 position: relative;
 margin-left: 10rem;
 margin-bottom: 3rem;
+@media only #{$desktop-max}{
+font-size:0.9rem;
+letter-spacing: 0.3rem;
+}
+
+@media only #{$mobile-xsMax}{
+   margin-left: 6.5rem;
+   }
             }
             .content-2-h4:after{
                 content: '';
@@ -99,6 +144,10 @@ margin-bottom: 3rem;
                 left: -9.5rem;
                 bottom: 0.6rem;
                 background: #FFC178;
+                @media only #{$desktop-max}{
+                    width: 7.2rem;
+                    height: 0.1rem;
+                    }
             }
 
 
@@ -106,12 +155,18 @@ margin-bottom: 3rem;
 font-size: 7.6rem;
 font-weight: 600;
 color: white;
+@media only #{$desktop-max}{
+ font-size: 5.5rem;
+    }
             }
 
             .content-2-h1-1{
 font-size: 6.2rem;
 color: white;
 font-weight: 100;
+@media only #{$desktop-max}{
+    font-size: 4.5rem;
+       }
             }
 
             .scroll-icon{
@@ -125,6 +180,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 0.5rem;
+
                     .arrow{
 font-size: 2rem;
                     }
@@ -143,7 +199,9 @@ font-size: 2rem;
        
         transform: translateY(-8rem) translateX(-50%);
         rotate: 45deg;
-
+@media only #{$mobile-xsMax}{
+    left: 35%;
+}
         .scroll-arrow{
             position: absolute;
             top: 0;
